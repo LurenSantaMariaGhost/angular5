@@ -1,0 +1,31 @@
+<!--CONTENEDOR-->
+<mat-drawer-container class="example-container" autosize>
+
+  <!--SIDEBAR-->
+  <mat-drawer 
+  style="width: 200px;"
+  [opened]="showSidebar" 
+  #drawer 
+  class="example-sidenav" 
+  mode="side">
+    <app-sidebar></app-sidebar>
+  </mat-drawer>
+  
+
+  <!--CONTENIDO-->
+  <div class="example-sidenav-content">
+
+    <!--TOOLBAR-->
+    <app-toolbar (toggleSidebar)="showSidebar = !showSidebar"></app-toolbar>
+
+    <!--<app-icons></app-icons>-->
+    <main style="padding: 1rem;">
+      <h1 fontWeight="bolder" appHeadlines>Usuarios</h1>
+      <!--<app-forms></app-forms>-->
+      <app-users></app-users>
+    </main>
+    
+  </div>
+
+</mat-drawer-container>
+
